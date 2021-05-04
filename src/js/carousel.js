@@ -11,7 +11,9 @@ function onNextClick() {
     const imgWidth = sliderEl.offsetWidth;
     sliderEl.scrollLeft += imgWidth; 
 
-    console.log('Click next ', sliderEl.scrollLeft, imgWidth);
+    if (sliderEl.scrollLeft > imgWidth) {
+        sliderEl.scrollLeft = 0;
+    }
 }
 
 function onPreviousClick() {
