@@ -1,0 +1,43 @@
+@import './reset';
+
+.container {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+
+    #previous, #next {
+        cursor: pointer;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff;
+    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        top: calc(50% - 25px);
+        left: 30px;
+    }
+
+    #next {
+        left: unset;
+        right: 30px;
+    }
+
+    .slider {
+        margin: 0 auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        scroll-behavior: smooth;
+
+        .img {
+            width: 100%;
+            max-width: 100%;
+            object-fit: cover;
+        }
+    }
+}
